@@ -11,7 +11,6 @@ func main() {
 	r := router.NewRouter()
 
 	r.Use(middlweare.LoggerMiddleware)
-	// Define your routes
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Welcome to the Home Page!"))
 	})
